@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Roboto:wght@400;500&display=swap');
+        
+        /* Added smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background-color: #f8f8f8; color: #333;">
@@ -21,11 +26,10 @@
             </svg>
         </div>
         <ul style="display: flex; list-style: none; margin: 0; padding: 0;">
-            <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Home</a></li>
-            <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Men</a></li>
-            <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Women</a></li>
-            <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Kids</a></li>
-            <li style="margin: 0 15px;"><a href="#" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Sale</a></li>
+            <li style="margin: 0 15px;"><a href="#home" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Home</a></li>
+            <li style="margin: 0 15px;"><a href="#products" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Products</a></li>
+            <li style="margin: 0 15px;"><a href="#story" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Our Story</a></li>
+            <li style="margin: 0 15px;"><a href="#contact" style="text-decoration: none; color: #111; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 0.5px; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'">Contact</a></li>
         </ul>
         <div style="display: flex; align-items: center; gap: 20px;">
             <i class="fas fa-search" style="font-size: 18px; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#999'" onmouseout="this.style.color='#111'"></i>
@@ -35,19 +39,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section style="height: 90vh; min-height: 600px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/9dda6202-e2ff-407b-a33e-d6a8e1a9bda6/nike-just-do-it.jpg') no-repeat center center/cover; display: flex; align-items: center; padding: 0 10%; color: white; position: relative; overflow: hidden;">
+    <section id="home" style="height: 90vh; min-height: 600px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/9dda6202-e2ff-407b-a33e-d6a8e1a9bda6/nike-just-do-it.jpg') no-repeat center center/cover; display: flex; align-items: center; padding: 0 10%; color: white; position: relative; overflow: hidden;">
         <div style="max-width: 600px; z-index: 2;">
             <h1 style="font-size: 4.5rem; margin-bottom: 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1; text-transform: uppercase; letter-spacing: 2px;">JUST<br>DO IT.</h1>
             <p style="font-size: 1.3rem; margin-bottom: 40px; line-height: 1.5;">Unleash your potential with the latest Nike collection. Limited edition styles available now.</p>
             <div style="display: flex; gap: 20px;">
-                <button style="background-color: #000; color: white; border: none; padding: 15px 40px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.backgroundColor='#333'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#000'; this.style.transform='translateY(0)'">Shop Men</button>
-                <button style="background-color: transparent; color: white; border: 2px solid white; padding: 15px 40px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='transparent'; this.style.transform='translateY(0)'">Shop Women</button>
+                <a href="#products" style="background-color: #000; color: white; border: none; padding: 15px 40px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; letter-spacing: 1px; text-transform: uppercase; text-decoration: none;" onmouseover="this.style.backgroundColor='#333'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#000'; this.style.transform='translateY(0)'">Shop Now</a>
+                <a href="#story" style="background-color: transparent; color: white; border: 2px solid white; padding: 15px 40px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; letter-spacing: 1px; text-transform: uppercase; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='transparent'; this.style.transform='translateY(0)'">Our Story</a>
             </div>
         </div>
     </section>
 
     <!-- Featured Products -->
-    <section style="padding: 80px 5%; text-align: center; background-color: white;">
+    <section id="products" style="padding: 80px 5%; text-align: center; background-color: white;">
         <h2 style="margin-bottom: 40px; font-size: 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Featured Products</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; justify-items: center;">
             <!-- Product 1 -->
@@ -101,38 +105,12 @@
                     <button style="background-color: #000; color: white; border: none; padding: 12px 0; width: 100%; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">ADD TO CART</button>
                 </div>
             </div>
-
-            <!-- Product 5 -->
-            <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); width: 100%; max-width: 320px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
-                <div style="height: 250px; overflow: hidden;">
-                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5c0a8c0a-8b0a-4b0a-8b0a-8b0a4b0a8b0a/air-jordan-1-mid-mens-shoes-5zPZ9Z.png" alt="Jordan 1" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="margin-bottom: 10px; font-size: 1.3rem; font-family: 'Barlow Condensed', sans-serif;">Air Jordan 1 Mid</h3>
-                    <p style="color: #666; margin-bottom: 15px;">Men's Basketball Shoes</p>
-                    <p style="font-weight: bold; margin-bottom: 20px; font-size: 1.2rem;">$125.00</p>
-                    <button style="background-color: #000; color: white; border: none; padding: 12px 0; width: 100%; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">ADD TO CART</button>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); width: 100%; max-width: 320px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
-                <div style="height: 250px; overflow: hidden;">
-                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/5c0a8c0a-8b0a-4b0a-8b0a-8b0a4b0a8b0a/air-max-90-mens-shoes-5zPZ9Z.png" alt="Air Max 90" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="margin-bottom: 10px; font-size: 1.3rem; font-family: 'Barlow Condensed', sans-serif;">Nike Air Max 90</h3>
-                    <p style="color: #666; margin-bottom: 15px;">Men's Lifestyle Shoes</p>
-                    <p style="font-weight: bold; margin-bottom: 20px; font-size: 1.2rem;">$130.00</p>
-                    <button style="background-color: #000; color: white; border: none; padding: 12px 0; width: 100%; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">ADD TO CART</button>
-                </div>
-            </div>
         </div>
         <button style="margin-top: 50px; background-color: transparent; color: #111; border: 2px solid #111; padding: 12px 40px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; letter-spacing: 1px; text-transform: uppercase;" onmouseover="this.style.backgroundColor='#111'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#111'">View All Products</button>
     </section>
 
     <!-- Brand Story -->
-    <section style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/9dda6202-e2ff-407b-a33e-d6a8e1a9bda6/nike-just-do-it.jpg') no-repeat center center/cover; height: 500px; display: flex; align-items: center; padding: 0 10%; color: white; margin: 0;">
+    <section id="story" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/9dda6202-e2ff-407b-a33e-d6a8e1a9bda6/nike-just-do-it.jpg') no-repeat center center/cover; height: 500px; display: flex; align-items: center; padding: 0 10%; color: white; margin: 0;">
         <div style="max-width: 600px;">
             <h2 style="font-size: 2.8rem; margin-bottom: 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1.1; letter-spacing: 1px;">INNOVATION THAT DRIVES YOU</h2>
             <p style="margin-bottom: 30px; line-height: 1.6; font-size: 1.1rem;">Since 1964, Nike has been pushing the boundaries of athletic performance. Our mission is to bring inspiration and innovation to every athlete in the world. Whether you're a professional or just starting out, we have the gear to help you reach your potential.</p>
@@ -141,7 +119,7 @@
     </section>
 
     <!-- Newsletter Subscription -->
-    <section style="text-align: center; padding: 80px 5%; background-color: #f1f1f1;">
+    <section id="contact" style="text-align: center; padding: 80px 5%; background-color: #f1f1f1;">
         <h2 style="margin-bottom: 15px; font-size: 2.2rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 1px;">STAY UPDATED</h2>
         <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to get exclusive offers, new releases, and the latest news from Nike.</p>
         <form style="display: flex; justify-content: center; gap: 10px; max-width: 500px; margin: 0 auto;">
@@ -156,7 +134,7 @@
             <div>
                 <h3 style="margin-bottom: 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; letter-spacing: 1px;">Products</h3>
                 <ul style="list-style: none; margin: 0; padding: 0;">
-                    <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">All Shoes</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#products" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">All Shoes</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Clothing</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Accessories</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">New Releases</a></li>
@@ -166,7 +144,7 @@
             <div>
                 <h3 style="margin-bottom: 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; letter-spacing: 1px;">Support</h3>
                 <ul style="list-style: none; margin: 0; padding: 0;">
-                    <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Contact Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#contact" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Contact Us</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">FAQs</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Shipping</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Returns</a></li>
@@ -176,7 +154,7 @@
             <div>
                 <h3 style="margin-bottom: 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; letter-spacing: 1px;">Company</h3>
                 <ul style="list-style: none; margin: 0; padding: 0;">
-                    <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">About Nike</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#story" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">About Nike</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Careers</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Investors</a></li>
                     <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Sustainability</a></li>
@@ -198,6 +176,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- QR Code Section -->
+        <div style="text-align: center; margin-top: 30px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <p style="margin-bottom: 10px; font-size: 0.9rem; color: #ccc;">Scan to see who made this website</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Made%20by%20Ankush&margin=10" 
+                 alt="QR Code: Made by Ankush" 
+                 style="width: 100px; height: 100px; background: white; padding: 8px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #999;">© 2023 Nike Clone by Ankush</p>
+        </div>
+
         <div style="border-top: 1px solid #333; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
                 <a href="#" style="color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ccc'">Terms of Use</a>
@@ -207,5 +195,10 @@
             <p style="color: #ccc; font-size: 0.9rem; margin: 0;">&copy; 2023 Nike, Inc. All Rights Reserved</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" style="position: fixed; bottom: 30px; right: 30px; background-color: #000; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: all 0.3s; z-index: 99;" onmouseover="this.style.backgroundColor='#333'; this.style.transform='translateY(-5px)'" onmouseout="this.style.backgroundColor='#000'; this.style.transform='translateY(0)'">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
